@@ -4,7 +4,7 @@ defmodule HyperAuth.Mixfile do
   def project do
     [
       app: :hyper_auth,
-      version: "0.0.0",
+      version: "0.0.1",
       elixir: "~> 1.3",
       description: "Authentication",
       start_permanent: Mix.env == :prod,

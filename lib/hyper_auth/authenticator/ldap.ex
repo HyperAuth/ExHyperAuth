@@ -21,16 +21,12 @@ defmodule HyperAuth.Authenticator.LDAP do
   It will verify the credentials of authentications
   based in password with a LDAP server. It requires the
   optional dependencie [Exldap](https://hex.pm/packages/exldap).
-
-  It can use an LDAP base search configured in the plug options.
-  For example:
-  ```
-  plug HyperAuth, public: true, ldap_base: "OU=Accounts,DC=example,DC=com"
-  ```
   """
 
   @doc """
   LDAP authentication.
+
+  It can use an LDAP base search with the option `:ldap_base`.
   """
   def authenticate(credentials, opts) do
     username = credentials["Username"]

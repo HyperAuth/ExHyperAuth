@@ -21,5 +21,5 @@ defmodule HyperAuth.Authenticator do
   @doc """
   Authenticate the suplicant.
   """
-  @callback authenticate(authorization :: map, opts :: Plug.opts) :: map | nil | {:error, String.t} | :error
+  @callback authenticate(authorization :: map, opts :: keyword()) :: map | nil | {:error, String.t} | :error
 end
